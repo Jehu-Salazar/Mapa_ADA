@@ -3,21 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/static/stylePerfil.css">
 </head>
 <body>
-    <header>
-        <h1>Mi Perfil</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Bienvenido/a</h2>
-            <p>Esta es una página básica de perfil. Aquí puedes mostrar información del usuario, editar datos o agregar más secciones según lo necesites.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Mapa ADA</p>
-    </footer>
+    <div class="perfil-container">
+        <!-- Cabecera -->
+        <header class="perfil-cabecera">
+            <h1>PERFIL DE USUARIO</h1>
+        </header>
+
+        <!-- Foto de perfil -->
+        <div class="perfil-foto">
+            <img src="/static/images/imagenp3.jpg" alt="Foto de perfil">
+        </div>
+
+        <!-- Nombre (vacío, se llenará con JS) -->
+        <h2 class="perfil-nombre" id="nombres"></h2>
+
+        <!-- Datos del usuario (todos vacíos) -->
+        <div class="perfil-datos">
+            <div class="dato">
+                <span class="etiqueta">Usuario:</span>
+                <span class="valor" id="usuario"></span>
+            </div>
+            <div class="dato">
+                <span class="etiqueta">Honor:</span>
+                <div class="barra-honor">
+                    <div class="barra-progreso" id="honor-barra"></div>
+                    <span class="porcentaje" id="honor-texto"></span>
+                </div>
+            </div>
+            <div class="dato">
+                <span class="etiqueta">Calificación:</span>
+                <span class="valor" id="calificacion"></span>
+            </div>
+            <div class="dato">
+                <span class="etiqueta">Saldo:</span>
+                <span class="valor" id="saldo"></span>
+            </div>
+            <div class="dato">
+                <span class="etiqueta">Correo:</span>
+                <span class="valor" id="correo"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/perfil.js"></script>
 </body>
 </html>
